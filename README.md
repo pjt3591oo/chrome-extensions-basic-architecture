@@ -32,6 +32,8 @@ background는 확장 프로그램이 활성화 되지 않더라도 동작하는 
 └── icons/
 ```
 
+![](./resource/sample1.png)
+
 만약 크롬 확장프로그램을 눌렀을 때 popup이 아닌 side panel이 열리게 하려면 manifest.json에서 action.default_popup을 제거하고 background.js에 다음과 같이 openPanelOnActionClick을 true로 설정
 
 ```js

@@ -1,1 +1,1 @@
-console.log("sidepanel.js loaded");
+console.log("options.js loaded");

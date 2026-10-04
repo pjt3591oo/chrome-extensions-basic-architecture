@@ -51,13 +51,13 @@ Popup·Side Panel·DevTools → Background
 Content → Background
              chrome.runtime.sendMessage()
 
-Side Panel → 웹페이지의 Content Script
-             tabs.query()로 탭 찾기
-             chrome.tabs.sendMessage()로 전송
+Background·Popup·Side Panel → 웹페이지의 Content Script
+            대상 탭 ID를 확보하여 chrome.tabs.sendMessage(tabId, ...)로 전송
+            현재 활성 탭이 대상이라면 chrome.tabs.query()로 조회
 
-Background·Popup·Side Panel·DevTools → 웹페이지의 Content Script 
-            tabs.query()로 탭 찾기
-            chrome.tabs.sendMessage(tabId, ...)
+DevTools Panel → 검사 중인 웹페이지의 Content Script
+            chrome.devtools.inspectedWindow.tabId로 검사 대상 탭 ID 확인
+            chrome.tabs.sendMessage(tabId, ...)로 전송
 ```
 
 Content에서 확장 화면(Popup·Side Panel·DevTools)으로 직접 메시지를 보내지 않는다. 

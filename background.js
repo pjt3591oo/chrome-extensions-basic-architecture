@@ -1,6 +1,7 @@
 console.log("background.js loaded");
 
 // popup 대신 side panel을 열기위한 설정
+// manifest.json의 action.default_popup을 제거하고
 // openPanelOnActionClick: true로 설정하면 확장 프로그램 아이콘을 클릭할 때 사이드 패널이 열리도록 설정
 // manifest.json에서 "side_panel"을 설정해야 함
 chrome.sidePanel.setPanelBehavior({

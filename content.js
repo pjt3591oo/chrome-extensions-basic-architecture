@@ -11,7 +11,7 @@ h1.addEventListener("click", async () => {
     const response = await chrome.runtime.sendMessage({
       type: "greeting",
       payload: {
-        message: "안녕~ 이것은 side panel에서 보내는 메시지야~",
+        message: "안녕~ 이것은 content script에서 보내는 메시지야~",
       },
       from: "content", // 메시지를 보낸 곳을 명시적으로 지정
     });
